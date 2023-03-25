@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Neomorphism Calculator using Html, Css and JavaScript</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="formControl">
+            <input type="checkbox" id="checkBx"/> <span>Light/Dark</span>
+        </div>
+        <div class="calculator">
+            <div class="screen">
+                <div class="amountBx">
+                    <span>Final Balance</span>
+                    <input type="text" class="amountValue" disabled/>
+                </div>
+            </div>
+            <div class="interestBx">
+                <div class="wrapper">
+                    <span>Pricipal </span>
+                    <div>
+                        <span>$</span>
+                        <input type="text" class="principal" />
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <span>Time / Duration </span>
+                    <div>
+                        <span>$</span>
+                        <input type="text" class="time" />
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <span>Interest rate %</span>
+                    <input type="text" class="rate" />
+                </div>
+                <div class="wrapper">
+                    <span>Simple Interest</span>
+                    <input type="text" class="simpleInterest" disabled/> 
+
+                </div>
+            </div>
+            <div class="numbersBx">
+                <button class="numpad" value="7">7</button>
+                <button class="numpad" value="8">8</button>
+                <button class="numpad" value="9">9</button>   
+                <button class="numpad" value="+">+</button>
+                <button class="numpad" value="4">4</button>
+                <button class="numpad" value="5">5</button>
+                <button class="numpad" value="6">6</button>
+                <button class="numpad" value="-">-</button>
+                <button class="numpad" value="1">1</button>
+                <button class="numpad" value="2">2</button>
+                <button class="numpad" value="3">3</button>
+                <button class="numpad" value="*">*</button>
+                <button class="numpad" value="C">C</button>
+                <button class="numpad" value="0">0</button>
+                <button class="numpad" value="/">/</button>
+                <button class="numpad equalBtn" value="=">=</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --body-bg-color: #ebf1f8;
+    --calc-bg-color: #f2f3f7;
+    --faint-color: rgba(0,0,0,0.9);
+    --screen-bg-color: #c0d0b4;
+    --light-shadow: #dee8f0;
+    --white-color: #fff;
+    --text-color: rgba(0, 0, 0, 0.6);
+    --white-al-09:  rgba(255,255,255,0.9);
+    --dark-al-01: rgba(0,0,0,0.1);
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-bg-color);
+}
+
+body.dark-theme{
+    --calc-bg-color: #292c31;
+    --white-al-09: #2f3338;
+    --dark-al-01: #23252a;
+    --text-color: #fff;
+    --light-shadow: rgba(0,0,0,0.1);
+    --white-color: #18252d;
+    --faint-color: rgba(255,255,255, 0.5);
+}
+
+.formControl {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    place-content: center;
+    gap: 0.5em;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.amountValue{
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+.container .calculator{
+    max-width: 400px;
+    background: var(--calc-bg-color);
+    box-shadow: 13px 13px 40px var(--light-shadow),
+                -13px -13px 40px var(--light-shadow);
+
+    border-radius: 1.3rem;
+    padding: 1.6rem;
+}
+
+.calculator .screen{
+    width: 100%;
+    background: var(--screen-bg-color);
+    border-radius: 0.4rem;
+    padding: 1rem;
+    box-shadow: inset 7px 7px 14px rgba(0, 0, 0, 0.26),
+                inset -7px -7px 14px rgba(255, 255, 255, 0.5),
+                0 0 0 10px var(--white-color),
+                7px 7px 14px 2px rgba(0, 0, 0, 0.11),
+                -7px -7px 14px 3px #dee8f0;
+}
+
+body.dark-theme .screen{
+    box-shadow: inset 7px 7px 14px rgba(0, 0, 0, 0.26),
+            inset -7px -7px 14px rgba(255, 255, 255, 0.5),
+            0 0 0 10px #2f3338,
+            7px 7px 14px 2px rgba(0, 0, 0, 0.96),
+            -7px -7px 14px 3px rgba(255, 255, 255, 0.16);
+}
+
+.calculator .screen .amountBx{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator .screen .amountBx span{
+    font-weight: bold;
+}
+
+.calculator .numbersBx{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 70px);
+    place-items: center;
+    grid-row-gap: 1.2rem;
+    grid-column-gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.calculator .numbersBx .numpad{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: var(--text-color);
+    font-weight: 800;
+    border-radius: 1.3rem;
+    box-shadow: -6px -6px 10px var(--white-al-09),
+                6px 6px 10px var(--dark-al-01);
+}
+
+
+.calculator .numbersBx .numpad:active{
+    box-shadow:  6px 6px 10px var(--white-al-09),
+                inset 6px 6px 10px var(--dark-al-01);
+}
+
+.calculator .interestBx{
+    margin-top: 2rem;
+    box-shadow: inset 5px 5px 10px #fff,
+                -1px -1px 0 rgba(0, 0, 0, 0.06),
+                1px 1px 0 rgba(0, 0, 0, 0.03),
+                5px 5px 10px var(--light-shadow);
+    padding: 2rem;
+    border-radius: 0.6rem;
+    color: var(--text-color);
+}
+
+body.dark-theme .interestBx{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4),
+                 -1px -1px 0 rgba(255, 255, 255, 0.06),
+                1px 1px 0 rgba(255, 255, 255, 0.03),
+                inset 5px 5px 10px var(--light-shadow);
+}
+
+.calculator .interestBx .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calculator .interestBx .wrapper input{
+    width: 100px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: var(--text-color);
+    background: var(--white-color);
+    text-align: right;
+    border: none;
+    outline: none;
+    border-radius: 0.3rem;
+}
+
+.calculator .interestBx .wrapper > div span{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.calculator .interestBx .wrapper span{
+    color: var(--faint-color);
+
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.wrapper:not(:last-child){
+    margin-bottom: 0.5rem;
+}
